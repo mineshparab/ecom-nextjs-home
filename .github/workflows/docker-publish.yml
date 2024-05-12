@@ -37,6 +37,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build Docker image  
-        run: docker build . --file Dockerfile --tag min-image-homepage:$(date +%s)
+      - name: listing all the files
+        run: ls -al
+
+      - name: Build Docker image
+        run: docker build . --file homepage-frontend/Dockerfile --tag min-image-homepage:$(date +%s)
 
