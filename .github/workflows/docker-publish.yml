@@ -37,8 +37,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: listing all the files
-        run: ls -al
+      - name: change directory to homepage-frontend
+        run: cd homepage-frontend
 
       - name: running npm install
         run: npm install --no-fund
