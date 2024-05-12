@@ -41,7 +41,8 @@ jobs:
         run: ls -al
 
       - name: running npm install
-        run: npm install   
+        run: npm install
+        working-directory: homepage-frontend/
 
       - name: Build Docker image
         run: docker build . --file homepage-frontend/Dockerfile --tag min-image-homepage:$(date +%s)
