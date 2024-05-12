@@ -44,6 +44,12 @@ jobs:
         run: npm install --no-fund --verbose
         working-directory: homepage-frontend/
 
+      - name: list files under current directory
+        run: ls -al        
+
+      - name: node version
+        run: node --version
+
       - name: Build Docker image
         run: docker build . --file homepage-frontend/Dockerfile --tag min-image-homepage:$(date +%s)
 
