@@ -51,5 +51,5 @@ jobs:
         run: node --version
 
       - name: Build Docker image
-        run: docker build . --file homepage-frontend/Dockerfile --tag min-image-homepage:$(date +%s)
+        run: docker build homepage-frontend/. --file homepage-frontend/Dockerfile --tag min-image-homepage:$(date +%s)
 
