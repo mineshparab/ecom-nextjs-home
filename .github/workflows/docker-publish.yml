@@ -41,7 +41,7 @@ jobs:
         run: ls -al
 
       - name: running npm install
-        run: npm install
+        run: npm install --no-fund
         working-directory: homepage-frontend/
 
       - name: Build Docker image
